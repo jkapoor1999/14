@@ -7,6 +7,7 @@ import (
 
 func first(pattern string, lst []File) []string {
 	res := []string{}
+	
 	for _, file := range lst{
 		for ind, line := range file.lines{
 			if strings.Contains(line, pattern) {
@@ -82,4 +83,16 @@ func fifth(pattern string, lst []File) []string {
 		}
 	}
 	return res
+}
+
+func stringSlicesEqual(a, b []string) bool {
+    if len(a) != len(b) {
+        return false
+    }
+    for i, v := range a {
+        if v != b[i] {
+            return false
+        }
+    }
+    return true
 }

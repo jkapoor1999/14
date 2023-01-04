@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	for _, line := range Search("Hello", "-i", []string{"input.txt", "greeting.txt"}) {
+	for _, line := range Search("hello", "-i", []string{"input.txt", "greeting.txt"}) {
 		println(line)
 	}
 }
